@@ -44,7 +44,6 @@ for dotfile in `ls $dir`; do
     link_dotfile $HOME/.$dotfile $dir/$dotfile $dotfile
 done
 
-link_dotfile $HOME/pymol_scripts $pymol_scripts_dir
 
 # Symlink the zsh theme (only if oh my zsh is installed)
 if [[ -e $zsh_dir ]]; then
