@@ -12,7 +12,7 @@ PATH_PREFIX=$HOME/bin
 plugins=(colored-man-pages direnv docker docker-compose git github tmux)
 # Mac-specific configuration
 if [[ ${OSTYPE} == darwin* ]]; then
-    plugins+=(iterm2 macports osx)
+    plugins+=(iterm2 macports macos)
     # test iTerm2 shell integration -- yes, you should be using iTerm2
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
@@ -51,6 +51,7 @@ else
     # Additional Mac settings for GNUplot, R and PyMOL
     export GNUTERM="aqua"
     export R_HOME=/Library/Frameworks/R.framework/Resources
+    export SYSTEM_VERSION_COMPAT=0
 
     # color formatting for the BSD implementation of `ls`
     export LSCOLORS='ExGxcxdxcxegedabagacad'
